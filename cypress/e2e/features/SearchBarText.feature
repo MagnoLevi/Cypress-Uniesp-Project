@@ -12,7 +12,5 @@ Feature: I want to login into the site with valid data
 
         Then User search results are displayed
 
-        And User accepts cookies
-        # And User clicks on the consult CPF button
-
-        Then User scrolls the page down
+        And User scrolls the page down
+        # Then User clicks on the consult CPF button

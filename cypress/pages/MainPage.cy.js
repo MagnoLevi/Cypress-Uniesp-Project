@@ -26,15 +26,15 @@ class MainPage {
         cy.get('.btn-solicitar').first().click();
     }
 
-    scrollPageGradually() {
+    scrollPageGradually(scrollHeightParam = null) {
         cy.document().then((doc) => {
-            const scrollHeight = doc.body.scrollHeight; // Altura total da página
-            const step = 50; // Pixels por "passo"
-            const delay = 50; // Tempo entre cada passo (em ms)
+            const scrollHeight = scrollHeightParam ? scrollHeightParam : doc.body.scrollHeight;
+            const step = 50;
+            const delay = 50;
     
             for (let y = 0; y <= scrollHeight; y += step) {
-                cy.wait(delay); // Aguarda um pouco entre os scrolls
-                cy.scrollTo(0, y); // Move para a próxima posição
+                cy.wait(delay);
+                cy.scrollTo(0, y);
             }
         });
     }
