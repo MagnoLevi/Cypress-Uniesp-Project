@@ -1,9 +1,9 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
-import mainPage from "../../pages/MainPage.cy";
+import searchBarPage from "../../pages/SearchBarPage";
 import generalPage from "../../pages/GeneralPage.cy";
 
-Given("User navigates to the Main Page", () => {
-    mainPage.enterURL();
+Given("User navigates to the Main Page to test Search Bar", () => {
+    searchBarPage.enterURL();
 });
 
 When("User types in search bar", (datatable) => {
@@ -11,13 +11,13 @@ When("User types in search bar", (datatable) => {
 
     cy.wait(1000);
     datatable.hashes().forEach((element) => {
-        mainPage.enterSearchBarText(element.text);
+        searchBarPage.enterSearchBarText(element.text);
     });
 });
 
 And("User clicks on search button", () => {
     cy.wait(1000);
-    mainPage.clickSearchButton();
+    searchBarPage.clickSearchButton();
 });
 
 Then("User search results are displayed", () => {
@@ -25,7 +25,7 @@ Then("User search results are displayed", () => {
     generalPage.scrollPageGradually(200);
 
     cy.wait(1500);
-    mainPage.clickSearchResults();
+    searchBarPage.clickSearchResults();
 });
 
 And("User scrolls the page down", () => {

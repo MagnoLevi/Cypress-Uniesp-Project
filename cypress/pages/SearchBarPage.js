@@ -1,4 +1,4 @@
-class MainPage {
+class SearchBarPage {
     enterURL() {
         cy.visit(
             "https://www.gov.br/pt-br"
@@ -27,5 +27,5 @@ class MainPage {
     }
 }
 
-const mainPage = new MainPage();
-export default mainPage;
+const searchBarPage = new SearchBarPage();
+export default searchBarPage;

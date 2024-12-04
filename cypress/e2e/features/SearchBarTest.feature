@@ -1,7 +1,7 @@
 Feature: I want to utilize the search bar
 
     Background: Navigate to the Main Page
-        Given User navigates to the Main Page
+        Given User navigates to the Main Page to test Search Bar
 
     Scenario: Loading the main page
         When User types in search bar
