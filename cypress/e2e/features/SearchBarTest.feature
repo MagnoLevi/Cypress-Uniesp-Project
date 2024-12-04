@@ -1,7 +1,7 @@
-Feature: I want to login into the site with valid data
+Feature: I want to utilize the search bar
 
-    Background: Navigate to the Website
-        Given User navigates to the Website
+    Background: Navigate to the Main Page
+        Given User navigates to the Main Page
 
     Scenario: Loading the main page
         When User types in search bar

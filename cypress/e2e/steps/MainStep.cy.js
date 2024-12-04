@@ -1,12 +1,13 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import mainPage from "../../pages/MainPage.cy";
+import generalPage from "../../pages/GeneralPage.cy";
 
-Given("User navigates to the Website", () => {
+Given("User navigates to the Main Page", () => {
     mainPage.enterURL();
 });
 
 When("User types in search bar", (datatable) => {
-    mainPage.acceptCookies();
+    generalPage.acceptCookies();
 
     cy.wait(1000);
     datatable.hashes().forEach((element) => {
@@ -15,25 +16,19 @@ When("User types in search bar", (datatable) => {
 });
 
 And("User clicks on search button", () => {
-    mainPage.acceptCookies();
-
     cy.wait(1000);
     mainPage.clickSearchButton();
 });
 
 Then("User search results are displayed", () => {
-    mainPage.acceptCookies();
-
     cy.wait(1500);
-    mainPage.scrollPageGradually(200);
+    generalPage.scrollPageGradually(200);
 
     cy.wait(1500);
     mainPage.clickSearchResults();
 });
 
 And("User scrolls the page down", () => {
-    mainPage.acceptCookies();
-
     cy.wait(1000);
-    mainPage.scrollPageGradually();
+    generalPage.scrollPageGradually();
 });
