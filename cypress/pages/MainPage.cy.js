@@ -1,13 +1,8 @@
-class SearchBarPage {
+class MainPage {
     enterURL() {
         cy.visit(
             "https://www.gov.br/pt-br"
-            // "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
         );
-    }
-
-    acceptCookies(){
-        cy.get('.btn-accept').click({ force: true });
     }
 
     enterSearchBarText(text) {
@@ -21,11 +16,7 @@ class SearchBarPage {
     clickSearchResults() {
         cy.get('ul.searchResults a').first().invoke('removeAttr', 'target').click();
     }
-
-    ClickConsultCpfButton() {
-        cy.get('.btn-solicitar').first().click();
-    }
 }
 
-const searchBarPage = new SearchBarPage();
-export default searchBarPage;
+const mainPage = new MainPage();
+export default mainPage;

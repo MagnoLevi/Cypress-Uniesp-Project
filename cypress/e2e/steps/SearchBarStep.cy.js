@@ -1,8 +1,8 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
-import mainPage from "../../pages/MainPage";
+import mainPage from "../../pages/MainPage.cy";
 import generalPage from "../../pages/GeneralPage.cy";
 
-Given("User navigates to the Main Page to test Search Bar", () => {
+Given("User navigates to the main page to test search bar", () => {
     mainPage.enterURL();
 });
 

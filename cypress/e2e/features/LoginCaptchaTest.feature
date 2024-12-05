@@ -1,7 +1,7 @@
 Feature: I want to the login to test Captcha
 
-    Background: Navigate to the Login Page
-        Given User navigates to the Login Page
+    Background: Navigate to the login page
+        Given User navigates to the login page
 
     Scenario: Loading the login page
         When User types cpf input

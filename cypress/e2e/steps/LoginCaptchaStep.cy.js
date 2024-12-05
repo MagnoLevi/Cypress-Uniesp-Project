@@ -1,7 +1,7 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import loginPage from "../../pages/LoginPage.cy";
 
-Given("User navigates to the Login Page", () => {
+Given("User navigates to the login page", () => {
     loginPage.enterURL();
 });
 
