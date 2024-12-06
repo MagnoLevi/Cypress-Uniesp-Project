@@ -13,4 +13,3 @@ Feature: I want to utilize the search bar
         Then User search results are displayed
 
         And User scrolls the page down
-        # Then User clicks on the consult CPF button

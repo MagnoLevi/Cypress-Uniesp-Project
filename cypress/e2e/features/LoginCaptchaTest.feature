@@ -1,4 +1,4 @@
-Feature: I want to the login to test Captcha
+Feature: I want to see the Captcha when login in
 
     Background: Navigate to the login page
         Given User navigates to the login page
