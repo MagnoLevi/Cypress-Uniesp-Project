@@ -4,3 +4,6 @@
 - Thiago Meira
 - Magno Levi
 - Fernando Braz
+
+## Link do vídeo
+- https://youtu.be/jMmvqC4Nngk
